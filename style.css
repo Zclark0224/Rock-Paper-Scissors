@@ -1,4 +1,55 @@
-h1 {
+body {
+    color: #008f11;
+    background-color: #0D0208;
+    font-family: 'OCR A Std', monospace;
+}
+
+.header {
     text-align: center;
-    font-weight: bold;
+    font-size: x-large;
+    font-family: 'OCR A Std', monospace;
+    color: #008f11;
+    background-color: #0D0208;
+    padding: 24px;
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 25%;
+}
+img {
+    width: 150px;
+    border-color: #008f11;
+    border: 1em;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    padding: 50px 25%;
+}
+.message {
+    align-self: center;
+}
+
+.scores{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 25%;
+}
+
+.player, .computer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.name {
+    padding: 1em;
 }

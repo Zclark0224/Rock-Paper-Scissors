@@ -8,16 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors Game</h1>
+    <div class="header">Human, can you defeat me?</div>
     
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissors"> Scissors</button>
-
+    <div class="buttons">
+        <button class="rock"></buttonclass><img src="images/rock.jpg" alt="rock"></button>
+        <button class="paper"><img src="images/paper.jpg" alt="rock"></button>
+        <button class="scissors"> <img src="images/scissors.jpg" alt="rock"></button>
+    </div>
+    
     <div class="scoreboard">
-        <div class="scores">
-            <div class="playerScore">Player:</div>
-            <div class="computerScore">Computer:</div>
+        <div class="message">Choose your weapon!</div>
+
+        <div class="scores"> 
+            <div class="player">
+                <div class="name">Player </div>
+                <div class="pScore">0</div>
+            </div>
+                
+            <div class="computer">
+                <div class="name">Computer </div>
+                <div class="cScore">0</div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
