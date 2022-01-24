@@ -1,5 +1,5 @@
 body {
-    color: #008f11;
+    color: #00FF41;
     background-color: #0D0208;
     font-family: 'OCR A Std', monospace;
 }
@@ -8,7 +8,6 @@ body {
     text-align: center;
     font-size: x-large;
     font-family: 'OCR A Std', monospace;
-    color: #008f11;
     background-color: #0D0208;
     padding: 24px;
     
@@ -16,13 +15,18 @@ body {
 
 .buttons {
     display: flex;
-    justify-content: space-between;
-    padding: 50px 25%;
+    justify-content: space-around;
+    margin: 50px 15%;
 }
+
+button:hover {
+    color: #003B00;
+    transform: scale(1.1);
+    box-shadow: 0 0 100px 1px #003B00;
+}
+
 img {
     width: 150px;
-    border-color: #008f11;
-    border: 1em;
 }
 
 .scoreboard {
@@ -32,6 +36,7 @@ img {
     font-size: x-large;
     padding: 50px 25%;
 }
+
 .message {
     align-self: center;
 }
@@ -48,8 +53,15 @@ img {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    color: #00FF41;
 }
 
 .name {
     padding: 1em;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    
 }
