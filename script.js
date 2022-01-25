@@ -9,6 +9,8 @@ const scissorsButton = document.querySelector('.scissors');
 const message = document.querySelector('.message');
 const cScore = document.querySelector('.cScore');
 const pScore = document.querySelector('.pScore');
+const restartButton = document.querySelector('.restartButton');
+const modalTitle = document.querySelector('.modalTitle');
 
 function computerPlay() {
     var items = ['rock', 'paper', 'scissors'];
@@ -19,6 +21,7 @@ function computerPlay() {
 rockButton.addEventListener('click', () => handleClick('rock'));
 paperButton.addEventListener('click', () => handleClick('paper'));
 scissorsButton.addEventListener('click', () => handleClick('scissors'));
+restartButton.addEventListener('click', () => restartGame());
 
 function playRound (playerSelection, computerSelection) {
     if (playerSelection == computerSelection){
@@ -63,10 +66,24 @@ function handleClick(playerSelection) {
         
         if (gameOver()) {
             if(playerScore < computerScore){
-                message.textContent = 'Game over! Computer wins!';
+                modalTitle.textContent = 'Game over! Computer wins!';
+                retryModal.classList.add('active');
+                overlay.classList.add('active');
             } else{
-                message.textContent = 'Game over! Player wins!';
+                modalTitle.textContent = 'Game over! Player wins!';
+                retryModal.classList.add('active');
+                overlay.classList.add('active');
             }
         }
     }
+}
+
+function restartGame() {
+    playerScore = 0;
+    pScore.textContent = playerScore;
+    computerScore = 0;
+    cScore.textContent = computerScore;
+    message.textContent = 'Choose your weapon!';
+    retryModal.classList.remove('active');
+    overlay.classList.remove('active');
 }
