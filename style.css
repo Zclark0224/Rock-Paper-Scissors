@@ -92,6 +92,10 @@ img {
     color: #00FF41;
 }
 
+.restartButton:hover {
+    transform: scale(1);
+
+}
 .overlay {
     position: fixed;
     display: none;
@@ -108,3 +112,4 @@ img {
 .overlay.active {
     display: block;
 }
+
